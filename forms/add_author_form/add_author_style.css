@@ -1,0 +1,43 @@
+a{
+	font-size: 30px;
+	font-style: italic;
+}
+form{
+	display: table;
+	margin-top: 20px;
+}
+.row{
+	display: table-row;
+	line-height: 35px;
+}
+.coll{
+	display: table-cell;
+	font-size: 14pt;
+	text-align: right;
+}
+.padding-lable{
+	padding-right: 30px;
+}
+.brdr-r-5{
+	border-radius: 5px; 
+}
+input[name='name']{
+	width: 150px;
+}
+input[name='country']{
+	width: 150px;
+}
+input[name='year_of_birth']{
+	width: 150px;
+}
+input[name='genre']{
+	width: 150px;
+}
+a:hover{
+	border: 3px solid purple;
+	border-radius: 15px 5px;
+	padding: 3px;
+}
+.inform{
+	font-size: 25px;
+}
