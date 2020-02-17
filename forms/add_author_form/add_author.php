@@ -1,9 +1,9 @@
 <?php
 	if($_POST){
-		$f = fopen("..\data\authors_list.txt", "a+");
+		$f = fopen("../../data/author-".$_POST['name'].".txt", "w");
 		$authors_arr = array($_POST['name'], $_POST['country'], $_POST['year_of_birth'], $_POST['genre']);
 		$authors_str = implode(";", $authors_arr).';';
-		fwrite($f, "\n".$authors_str);
+		fwrite($f, $authors_str);
 		fclose($f);
 	}
 ?>

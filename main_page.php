@@ -1,5 +1,5 @@
 <?php
-	require(__DIR__ . '\data\read_authors_data.php');
+	require(__DIR__ . '/data/read_authors_data.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +15,7 @@
 			<br>
 		Приємного перегляду)
 		</span>
-		<p><a href="forms\add_author_form\add_author_page.php">Додати нового автора</a></p>	
+		<p><a href="forms/add_author_form/add_author_page.php">Додати нового автора</a></p>	
 		<table class="main-table">
 			<thead class="table-main-value">
 				<tr>
@@ -23,16 +23,17 @@
 					<th>Країна</th>
 					<th>Рік Народження</th>
 					<th>Жанри</th>
+					
 				</tr>
 			</thead>
 			<tbody>
 				<?php for ($i=0; $i < count($authors); $i++): ?>
 					<?php
 						$row_class = '';
-						if($authors[$i]['genre'] == 'Наукова'){
+						if(mb_convert_case($authors[$i]['genre'], MB_CASE_LOWER, "UTF-8") == 'наукова'){
 							$row_class = 'scientific-literature';
 						}
-						if($authors[$i]['genre'] == 'Художня'){
+						if(mb_convert_case($authors[$i]['genre'], MB_CASE_LOWER, "UTF-8") == 'художня'){
 							$row_class = 'fiction';
 						}
 					?>
@@ -41,6 +42,7 @@
 						<td><?php echo $authors[$i]['country']; ?></td>
 						<td><?php echo $authors[$i]['year_of_birth']; ?></td>
 						<td><?php echo $authors[$i]['genre'];?> література</td>
+						<td><a href="forms/edit_author_form/edit_author_page.php?file=<?php echo $authors[$i]['file_name']?>">Редагувати</a></td>
 					</tr>
 				<?php endfor; ?>
 			</tbody>

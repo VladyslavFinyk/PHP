@@ -1,11 +1,11 @@
 <?php
-	require("add_author.php");
+	require("edit_author.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Редагування</title>
-	<link rel="stylesheet" type="text/css" href="add_author_style.css">
+	<link rel="stylesheet" type="text/css" href="edit_author_style.css">
 </head>
 <body>
 	<a href="../../main_page.php"> На головну </a>
@@ -15,19 +15,19 @@
 
 		<div class="row">
 			<label for="name" class="coll padding-lable">Ім'я :</label>
-			<input type="text" name="name" class="coll brdr-r-5 input">
+			<input type="text" name="name" class="coll brdr-r-5 input" value="<?php echo $author['name']; ?>">
 		</div>
 		<div class="row">
 			<label for="country" class="coll padding-lable">Країна :</label>
-			<input type="text" name="country" class="coll brdr-r-5 input">
+			<input type="text" name="country" class="coll brdr-r-5 input" value="<?php echo $author['country']; ?>">
 		</div>
 		<div class="row">
 			<label for="year_of_birth" class="coll padding-lable">Рік народження :</label>
-			<input type="number" name="year_of_birth" class="coll brdr-r-5 input">
+			<input type="number" name="year_of_birth" class="coll brdr-r-5 input" value="<?php echo $author['year_of_birth']; ?>">
 		</div>
 		<div class="row">
 			<label for="genre" class="coll padding-lable">Жанр :</label>
-			<input type="text" name="genre" class="coll brdr-r-5 input">
+			<input type="text" name="genre" class="coll brdr-r-5 input" value="<?php echo $author['genre']; ?>">
 		</div>
 		<div class="row"><input type="submit" name="confirm" value="Застосувати зміни"></div>
 </body>
