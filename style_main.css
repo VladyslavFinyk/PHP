@@ -1,8 +1,15 @@
+body{
+	background-color: #181a1b;
+	margin: 0px;
+	color: white;
+}
 .main-table{
 	margin-left: 30px;
 	margin-top: 20px;
 }
-
+.content{
+	margin: 10px;
+}
 td, th{
 	border-style: solid;
 	border-width: 1px;
